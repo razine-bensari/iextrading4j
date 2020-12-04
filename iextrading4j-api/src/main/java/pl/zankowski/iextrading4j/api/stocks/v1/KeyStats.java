@@ -1,13 +1,12 @@
 package pl.zankowski.iextrading4j.api.stocks.v1;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
-
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.time.LocalDate;
 
 public class KeyStats implements Serializable {
 
@@ -29,9 +28,9 @@ public class KeyStats implements Serializable {
     private final BigDecimal ttmEPS;
     private final BigDecimal ttmDividendRate;
     private final BigDecimal dividendYield;
-    private final LocalDate nextDividendDate;
-    private final LocalDate exDividendDate;
-    private final LocalDate nextEarningsDate;
+    private final String nextDividendDate;
+    private final String exDividendDate;
+    private final String nextEarningsDate;
     private final BigDecimal peRatio;
     private final BigDecimal maxChangePercent;
     private final BigDecimal year5ChangePercent;
@@ -63,9 +62,9 @@ public class KeyStats implements Serializable {
             @JsonProperty("ttmEPS") final BigDecimal ttmEPS,
             @JsonProperty("ttmDividendRate") final BigDecimal ttmDividendRate,
             @JsonProperty("dividendYield") final BigDecimal dividendYield,
-            @JsonProperty("nextDividendDate") final LocalDate nextDividendDate,
-            @JsonProperty("exDividendDate") final LocalDate exDividendDate,
-            @JsonProperty("nextEarningsDate") final LocalDate nextEarningsDate,
+            @JsonProperty("nextDividendDate") final String nextDividendDate,
+            @JsonProperty("exDividendDate") final String exDividendDate,
+            @JsonProperty("nextEarningsDate") final String nextEarningsDate,
             @JsonProperty("peRatio") final BigDecimal peRatio,
             @JsonProperty("maxChangePercent") final BigDecimal maxChangePercent,
             @JsonProperty("year5ChangePercent") final BigDecimal year5ChangePercent,
@@ -175,15 +174,15 @@ public class KeyStats implements Serializable {
         return dividendYield;
     }
 
-    public LocalDate getNextDividendDate() {
+    public String getNextDividendDate() {
         return nextDividendDate;
     }
 
-    public LocalDate getExDividendDate() {
+    public String getExDividendDate() {
         return exDividendDate;
     }
 
-    public LocalDate getNextEarningsDate() {
+    public String getNextEarningsDate() {
         return nextEarningsDate;
     }
 

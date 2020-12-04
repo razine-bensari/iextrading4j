@@ -1,14 +1,16 @@
 package pl.zankowski.iextrading4j.api.stocks.v1;
 
-import com.flextrade.jfixture.JFixture;
-import nl.jqno.equalsverifier.EqualsVerifier;
-import org.junit.Test;
-import pl.zankowski.iextrading4j.api.util.ToStringVerifier;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.Test;
+
+import com.flextrade.jfixture.JFixture;
+
+import nl.jqno.equalsverifier.EqualsVerifier;
+import pl.zankowski.iextrading4j.api.util.ToStringVerifier;
 
 public class AdvancedStatsTest {
 
@@ -32,9 +34,9 @@ public class AdvancedStatsTest {
         final BigDecimal ttmEPS = fixture.create(BigDecimal.class);
         final BigDecimal ttmDividendRate = fixture.create(BigDecimal.class);
         final BigDecimal dividendYield = fixture.create(BigDecimal.class);
-        final LocalDate nextDividendDate = fixture.create(LocalDate.class);
-        final LocalDate exDividendDate = fixture.create(LocalDate.class);
-        final LocalDate nextEarningsDate = fixture.create(LocalDate.class);
+        final String nextDividendDate = fixture.create(String.class);
+        final String exDividendDate = fixture.create(String.class);
+        final String nextEarningsDate = fixture.create(String.class);
         final BigDecimal peRatio = fixture.create(BigDecimal.class);
         final BigDecimal maxChangePercent = fixture.create(BigDecimal.class);
         final BigDecimal year5ChangePercent = fixture.create(BigDecimal.class);

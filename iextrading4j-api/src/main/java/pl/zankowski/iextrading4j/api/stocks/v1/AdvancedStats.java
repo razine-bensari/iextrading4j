@@ -1,12 +1,12 @@
 package pl.zankowski.iextrading4j.api.stocks.v1;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
 
 public class AdvancedStats extends KeyStats {
 
@@ -52,9 +52,9 @@ public class AdvancedStats extends KeyStats {
             @JsonProperty("ttmEPS") final BigDecimal ttmEPS,
             @JsonProperty("ttmDividendRate") final BigDecimal ttmDividendRate,
             @JsonProperty("dividendYield") final BigDecimal dividendYield,
-            @JsonProperty("nextDividendDate") final LocalDate nextDividendDate,
-            @JsonProperty("exDividendDate") final LocalDate exDividendDate,
-            @JsonProperty("nextEarningsDate") final LocalDate nextEarningsDate,
+            @JsonProperty("nextDividendDate") final String nextDividendDate,
+            @JsonProperty("exDividendDate") final String exDividendDate,
+            @JsonProperty("nextEarningsDate") final String nextEarningsDate,
             @JsonProperty("peRatio") final BigDecimal peRatio,
             @JsonProperty("maxChangePercent") final BigDecimal maxChangePercent,
             @JsonProperty("year5ChangePercent") final BigDecimal year5ChangePercent,
